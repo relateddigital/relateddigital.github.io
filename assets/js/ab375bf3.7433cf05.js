@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkrelateddigital_docs=self.webpackChunkrelateddigital_docs||[]).push([["7981"],{7860(e){e.exports=JSON.parse('{"name":"docusaurus-plugin-content-docs","id":"vl-ios"}')}}]);
