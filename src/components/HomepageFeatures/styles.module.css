@@ -1,0 +1,35 @@
+.features {
+  display: flex;
+  align-items: center;
+  padding: 2rem 0 4rem;
+  width: 100%;
+}
+
+.sdkCard {
+  display: block;
+  height: calc(100% - 1.5rem);
+  margin-bottom: 1.5rem;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 8px;
+  color: inherit;
+}
+
+.sdkCard:hover {
+  border-color: var(--ifm-color-primary);
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo {
+  display: block;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 0.75rem;
+  object-fit: contain;
+}
+
+.version {
+  margin-bottom: 0;
+  color: var(--ifm-color-emphasis-700);
+}

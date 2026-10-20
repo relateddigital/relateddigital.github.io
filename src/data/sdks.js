@@ -1,0 +1,73 @@
+/** @type {Array<{id: string, label: string, routeBasePath: string, current: string, logo: string, mark: string, group?: 'legacy'}>} */
+const sdks = [
+  {
+    id: 'rd-android',
+    label: 'Related Digital Android',
+    routeBasePath: 'relateddigital-android',
+    current: '1.8.7',
+    logo: '/img/sdks/android.png',
+    mark: 'android',
+  },
+  {
+    id: 'rd-ios',
+    label: 'Related Digital iOS',
+    routeBasePath: 'relateddigital-ios',
+    current: '4.0.88',
+    logo: '/img/sdks/apple.png',
+    mark: 'apple',
+  },
+  {
+    id: 'vl-android',
+    label: 'Visilabs Android',
+    routeBasePath: 'visilabs-android',
+    current: '6.7.5',
+    logo: '/img/sdks/android.png',
+    mark: 'android',
+    group: 'legacy',
+  },
+  {
+    id: 'vl-ios',
+    label: 'Visilabs iOS',
+    routeBasePath: 'visilabs-ios',
+    current: '4.5.6',
+    logo: '/img/sdks/apple.png',
+    mark: 'apple',
+    group: 'legacy',
+  },
+  {
+    id: 'em-android',
+    label: 'Euromessage Android',
+    routeBasePath: 'euromessage-android',
+    current: '5.3.8',
+    logo: '/img/sdks/android.png',
+    mark: 'android',
+    group: 'legacy',
+  },
+  {
+    id: 'em-ios',
+    label: 'Euromessage iOS',
+    routeBasePath: 'euromessage-ios',
+    current: '2.8.8',
+    logo: '/img/sdks/apple.png',
+    mark: 'apple',
+    group: 'legacy',
+  },
+  {
+    id: 'react-native',
+    label: 'React Native',
+    routeBasePath: 'react-native',
+    current: '1.1.16',
+    logo: '/img/sdks/react-native.png',
+    mark: 'react',
+  },
+  {
+    id: 'flutter',
+    label: 'Flutter',
+    routeBasePath: 'flutter',
+    current: '0.8.3',
+    logo: '/img/sdks/flutter.png',
+    mark: 'flutter',
+  },
+];
+
+export default sdks;

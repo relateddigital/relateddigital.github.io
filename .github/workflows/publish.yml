@@ -1,0 +1,48 @@
+name: Publish site
+
+on:
+  push:
+    branches:
+      - sources
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout sources
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install and build
+        run: |
+          npm ci
+          npm run build
+
+      - name: Publish build to master
+        env:
+          PUBLISH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          work="$(mktemp -d)"
+          git clone --branch master --single-branch \
+            "https://x-access-token:${PUBLISH_TOKEN}@github.com/relateddigital/relateddigital.github.io.git" \
+            "$work"
+          find "$work" -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
+          cp -R build/. "$work/"
+          git -C "$work" add -A
+          git -C "$work" -c user.name="github-actions[bot]" \
+            -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
+            diff --cached --quiet \
+            || git -C "$work" -c user.name="github-actions[bot]" \
+              -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
+              commit -m "Publish the SDK docs site."
+          git -C "$work" push origin master

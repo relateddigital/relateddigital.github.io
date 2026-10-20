@@ -1,0 +1,81 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #2e8555;
+  --ifm-color-primary-dark: #29784c;
+  --ifm-color-primary-darker: #277148;
+  --ifm-color-primary-darkest: #205d3b;
+  --ifm-color-primary-light: #33925d;
+  --ifm-color-primary-lighter: #359962;
+  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+.navbar__logo {
+  height: 2rem;
+}
+
+.navbar__logo img {
+  height: 2rem;
+  width: auto;
+}
+
+.sdk-menu-item {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.sdk-menu-item::before {
+  content: '';
+  width: 18px;
+  height: 18px;
+  flex: none;
+  background: var(--sdk-logo) center / contain no-repeat;
+}
+
+.sdk-menu-item--android {
+  --sdk-logo: url('/img/sdks/android.png');
+}
+
+.sdk-menu-item--apple {
+  --sdk-logo: url('/img/sdks/apple.png');
+}
+
+.sdk-menu-item--react {
+  --sdk-logo: url('/img/sdks/react-native.png');
+}
+
+.sdk-menu-item--flutter {
+  --sdk-logo: url('/img/sdks/flutter.png');
+}
+
+.sdk-menu-group {
+  margin-top: 0.35rem;
+  padding: 0.55rem 0.75rem 0.15rem;
+  border-top: 1px solid var(--ifm-color-emphasis-200);
+  color: var(--ifm-color-emphasis-600);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #25c2a0;
+  --ifm-color-primary-dark: #21af90;
+  --ifm-color-primary-darker: #1fa588;
+  --ifm-color-primary-darkest: #1a8870;
+  --ifm-color-primary-light: #29d5b0;
+  --ifm-color-primary-lighter: #32d8b4;
+  --ifm-color-primary-lightest: #4fddbf;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
